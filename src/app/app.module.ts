@@ -10,7 +10,7 @@ import { MessagesComponent } from './messages/messages.component';
 import { AppRoutingModule } from './app-routing.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import {HttpClientModule} from '@angular/common/http';
-
+import { MaterialModule } from './material.module';
 
 
 @NgModule({
@@ -25,7 +25,8 @@ import {HttpClientModule} from '@angular/common/http';
     BrowserModule,
     FormsModule,
     AppRoutingModule /*add routes to the app*/,
-    HttpClientModule
+    HttpClientModule,
+    MaterialModule
   ],
   providers: [HeroService],
   bootstrap: [AppComponent]
