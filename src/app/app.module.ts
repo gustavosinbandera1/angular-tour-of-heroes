@@ -7,6 +7,7 @@ import { HeroesComponent } from './heroes/heroes.component';
 import { CrearHeroeComponent } from './crear-heroe/crear-heroe.component';
 import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 import { HeroService } from './hero.service';
+import { WebsocketService } from './websocket.service';
 import { MessagesComponent } from './messages/messages.component';
 import { AppRoutingModule } from './app-routing.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
@@ -30,7 +31,7 @@ import { MaterialModule } from './material.module';
     HttpClientModule,
     MaterialModule
   ],
-  providers: [HeroService],
+  providers: [HeroService, WebsocketService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -31,7 +31,7 @@ app.get('*', (req, res) => {
 })
 
 //set port
-app.set('port',process.env.PORT | 3000);
+app.set('port',process.env.PORT | 8080);
 
 
 //create server
@@ -55,10 +55,10 @@ io.on('connection', (socket) => {
   console.log( socket.handshake.query);
 
   // Broadcast messages
-  socket.on('send-message', (data) => {
+  socket.on('add-message', (data) => {
     console.log('recibiedo mensaje');
     console.log(data);
-    io.emit('message-received', data);
+    io.emit('message', data);
   });
 
   //disconnected socket
