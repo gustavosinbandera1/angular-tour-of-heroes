@@ -3,6 +3,7 @@ import {ScrollingModule} from '@angular/cdk/scrolling';
 import {CdkTableModule} from '@angular/cdk/table';
 import {CdkTreeModule} from '@angular/cdk/tree';
 import {NgModule} from '@angular/core';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {
   MatAutocompleteModule,
   MatBadgeModule,
@@ -43,6 +44,7 @@ import {
 
 @NgModule({
     exports: [
+      BrowserAnimationsModule,
       CdkTableModule,
       CdkTreeModule,
       DragDropModule,

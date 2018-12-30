@@ -25,7 +25,7 @@ router.get('/heroes/:id',  (req, res, next) => {
 });
 
 //save heroe
-router.post('/heroe', (req,res,next) => {
+router.post('/heroes', (req,res,next) => {
   var heroe = req.body;
   if(!heroe.firstName || !heroe.lastName || !heroe.city){
     res.status(400);

@@ -1,0 +1,28 @@
+<div class='container'>
+  <p>
+    <mat-form-field appearance='outline'>
+      <mat-label>firstName</mat-label>
+      <input [(ngModel)]='hero.firstName' matInput placeholder='FirstName'>
+      <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+    </mat-form-field>
+  </p>
+  <p>
+    <mat-form-field>
+        <mat-label>Last name</mat-label>
+        <input [(ngModel)]='hero.lastName' matInput placeholder='lastName'>
+    </mat-form-field>
+  </p>
+
+  <p>
+    <mat-form-field>
+      <mat-select [(value)]='hero.city' placeholder='City'>
+        <mat-option *ngFor='let city of cities' [value]='city.value'>{{city.viewValue}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </p>
+
+  <p>
+    <button mat-button (click)="crearHeroe(hero)">Crear Heroe</button>
+  </p>
+
+  </div>
